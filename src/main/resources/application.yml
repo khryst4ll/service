@@ -44,6 +44,11 @@ kafka:
     consumer:
       group-id: main-group
 
+dadata:
+  url: https://cleaner.dadata.ru/api/v1/clean/address
+  token: de9abfacb9745f5b2acf41e3f411d4d758078ef9
+  secret: a48658882d35d5df3db147eae90f8aceaf81626f
+
 
 
 
