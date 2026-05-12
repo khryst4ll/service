@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ResponseDto {
-    private String userStringId;
+    private String userStrId;
     private String purifiedAddress;
     private boolean userStatus;
 }

@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RequestDto {
-    private String userStringId;
     @NotBlank(message = "Адрес не должен быть пустым")
     private String address;
+    @NotBlank(message = "UserStrId не должен быть пустым")
+    private String userStrId;
 }

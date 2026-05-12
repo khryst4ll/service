@@ -9,13 +9,13 @@ import org.springframework.stereotype.Service;
 public class KafkaMsgSender {
     private static final String DEFAULT_TOPIC = "default-topic";
     @Autowired
-    private KafkaTemplate<String, Object> kafkaTemplate;
+    private KafkaTemplate<String, String> kafkaTemplate;
 
-    public void sendMsg(String message) {
-        if (message == null) {
+    public void sendMsg(String str) {
+        if (str == null) {
             throw new IllegalArgumentException("Message cannot be null");
         }
 
-        this.kafkaTemplate.send(KafkaMsgSender.DEFAULT_TOPIC, message);
+        this.kafkaTemplate.send(KafkaMsgSender.DEFAULT_TOPIC, str);
     }
 }

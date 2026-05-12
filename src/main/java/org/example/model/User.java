@@ -17,15 +17,12 @@ public class User {
     @Setter
     private String userStringId;
 
-    @Column(name = "dat_user_address")
-    @Setter(AccessLevel.PUBLIC)
-    private String userAddress;
-
-    @Column(name = "dat_user_ddtaddress")
-    @Setter(AccessLevel.PUBLIC)
-    private String ddtAddress;
-
     @Column(name = "dat_user_status")
     @Setter(AccessLevel.PUBLIC)
     private Boolean userStatus;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "dat_user_dat_addr_id", referencedColumnName = "dat_addr_id")
+    @Setter
+    private Address address;
 }
